@@ -1,0 +1,21 @@
+<table class="data sortable">
+  <thead>
+    <tr>
+      <th><%=t('Subcountry_ISO')%></th>
+      <th><%=t('Name')%></th>
+      <th><%=t('Country')%> <%=t('Name')%></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @subcountries.each do |subcountry| %>
+    <% country=subcountry.country %>
+    <tr>
+      <td><%=link_to(h(subcountry.iso),subcountry_path(subcountry))%></td>
+      <td><%=link_to(h(subcountry.name_en),subcountry_path(subcountry))%></td>
+      <td><%= country ? link_to(h(country.name_en),country_path(country)) : ''%></td>
+    </tr>
+  <%  end %>
+  </tbody>
+  <tfoot></tfoot>
+</table>
+

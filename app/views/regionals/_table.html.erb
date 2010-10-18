@@ -1,0 +1,15 @@
+<table class="data sortable">
+  <thead>
+    <tr>
+      <th><%=t('Name')%></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @regionals.each do |regional| %>
+    <tr>
+      <td><%=link_to(h(regional.name),regional_path(regional))%></td>
+    </tr>
+  <%  end %>
+  </tbody>
+  <tfoot></tfoot>
+</table>

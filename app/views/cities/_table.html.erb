@@ -1,0 +1,15 @@
+<table class="data sortable">
+  <thead>
+    <tr>
+      <th><%=t('Name')%></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @cities.each do |city| %>
+    <tr>
+      <td><%=link_to(h(city.name),city_path(city))%></td>
+    </tr>
+  <%  end %>
+  </tbody>
+  <tfoot></tfoot>
+</table>

@@ -1,0 +1,21 @@
+<table class="data sortable">
+  <thead>
+    <tr>
+      <th><%=t('Country_ISO')%></th>
+      <th><%=t('Country_ISO3')%></th>
+      <th><%=t('Country_ISONUM')%></th>
+      <th><%=t('Name')%></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% countries.each do |country| %>
+      <tr>
+        <td><%=link_to(h(country.iso),country_path(country))%></td>
+        <td><%=link_to(h(country.iso3),country_path(country))%></td>
+        <td><%=link_to(h(country.isonum),country_path(country))%></td>
+        <td><%=link_to(h(country.name_en),country_path(country))%></td>
+      </tr>
+    <%  end %>
+  </tbody>
+  <tfoot></tfoot>
+</table>

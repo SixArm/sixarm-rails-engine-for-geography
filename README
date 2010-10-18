@@ -1,0 +1,48 @@
+SixArm Ruby On Rails Engine For Localities
+==========================================
+
+Easy functionality for typical localities:
+* Continents
+* Countries
+* Subcountries
+* City
+* Districts
+* Neighborhood
+
+All of these localities can also use this helper class:
+* Regionals: includes latitude, longitude, population, area
+
+
+== Indexing
+
+We index liberally because we've seen signficant speedups doing this.
+
+We index names because we use this for AJAX-style autocompletion.
+
+
+== Internationalization
+
+To enable easier internationalization:
+* name_en is the name in English
+
+You can add your own names in other languages:
+* name_fr is the name in French
+* name_it is the name in Italian
+* name_gr is the name is Greek
+* etc.
+
+
+== Seed Data
+
+* Continent seed data for North America, South America, Europe, Asia, Africa, Oceania
+* Country seed data from ISO-2, ISO-3, United Nations 3-digit numeric, etc.
+* Subcountry seed data from ISO codes for U.S. states, Canada's provinces, etc.
+* District seed data will be added if/when we find good free standards
+* City seed data will be added if/when we find good free standards.
+* Regional seed data comes from all the other seed data, e.g. the Country seed data includes latitude and longitude
+
+
+=== Footer
+
+Copyright (c) 2009 Joel Parker Henderson.
+Released under the MIT license
